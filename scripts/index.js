@@ -4,7 +4,7 @@ let arrayOfCellNumbers = []
 let arrayOfExtractedNumbers = []
 let arrayOfPlayerTables = []
 
-handleStart = () => {
+const handleStart = () => {
   const numberBox = document.getElementById("startBox")
   const h1 = document.getElementById("h1")
   const h3 = document.getElementById("h3")
@@ -24,7 +24,7 @@ handleStart = () => {
   createPlayerTable(number)
 }
 
-handleNumberExtraction = () => {
+const handleNumberExtraction = () => {
   let randomNumber = generateRandomNumber()
 
   if (arrayOfExtractedNumbers.length <= 76) {
@@ -44,7 +44,7 @@ handleNumberExtraction = () => {
   arrayOfCellNumbers[randomNumber - 1].classList.add("selectedCell")
 }
 
-generateRandomNumber = () => {
+const generateRandomNumber = () => {
   let randomNumber = 0
   return (randomNumber = Math.ceil(Math.random() * 76))
 }
