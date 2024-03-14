@@ -18,7 +18,7 @@ handleStart = () => {
 
   h1.hidden = false
   numberExtBtn.hidden = false
-  pTables.hidden = true
+  pTables.hidden = false
 
   createTombolaTable()
   createPlayerTable(number)
