@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #131334;
+  color: white;
+}
+
+header {
+  text-align: center;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: center;
+
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.cellContainer {
+  width: 9%;
+  display: inline-block;
+
+  text-align: center;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+
+  border: 1px solid black;
+}
+
+#tombolaContainer {
+  margin-top: 2rem;
+}
+
+#numberExtractionBtn {
+  width: 10%;
+  font-family: inherit;
+
+  border-radius: 3px;
+
+  font-weight: 700;
+}
