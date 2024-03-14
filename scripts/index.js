@@ -21,7 +21,7 @@ const handleStart = () => {
   pTables.hidden = false
 
   createTombolaTable()
-  createPlayerTable(number)
+  createPlayerTables(number)
 }
 
 const handleNumberExtraction = () => {
@@ -44,10 +44,7 @@ const handleNumberExtraction = () => {
   arrayOfCellNumbers[randomNumber - 1].classList.add("selectedCell")
 }
 
-const generateRandomNumber = () => {
-  let randomNumber = 0
-  return (randomNumber = Math.ceil(Math.random() * 76))
-}
+const generateRandomNumber = () => Math.ceil(Math.random() * 76)
 
 const createTombolaTable = () => {
   const tombolaContainer = document.getElementById("tombolaContainer")
@@ -65,7 +62,7 @@ const createTombolaTable = () => {
   }
 }
 
-const createPlayerTable = (number) => {
+const createPlayerTables = (number) => {
   const playerTables = document.getElementById("playerTables")
 
   for (let j = 0; j < number; j++) {
