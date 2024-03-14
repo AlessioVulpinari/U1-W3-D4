@@ -27,8 +27,10 @@ handleStart = () => {
 handleNumberExtraction = () => {
   let randomNumber = generateRandomNumber()
 
-  while (arrayOfExtractedNumbers.includes(randomNumber)) {
-    randomNumber = generateRandomNumber()
+  if (arrayOfExtractedNumbers.length <= 76) {
+    while (arrayOfExtractedNumbers.includes(randomNumber)) {
+      randomNumber = generateRandomNumber()
+    }
   }
 
   arrayOfPlayerTables.forEach((array) => {
