@@ -25,23 +25,26 @@ handleStart = () => {
 }
 
 handleNumberExtraction = () => {
-  let randomNumber = Math.ceil(Math.random() * 76)
+  let randomNumber = generateRandomNumber()
 
-  if (arrayOfExtractedNumbers.includes(randomNumber)) {
-    console.log(randomNumber, "è già stato estratto")
-  } else {
-    arrayOfPlayerTables.forEach((array) => {
-      array.forEach((number) => {
-        if (parseInt(number.innerText) === randomNumber) {
-          number.classList.add("selectedCell")
-        }
-      })
-    })
-    arrayOfExtractedNumbers.push(randomNumber)
-    arrayOfCellNumbers[randomNumber - 1].classList.add("selectedCell")
+  while (arrayOfExtractedNumbers.includes(randomNumber)) {
+    randomNumber = generateRandomNumber()
   }
-  console.log(arrayOfExtractedNumbers)
-  console.log(arrayOfPlayerTables)
+
+  arrayOfPlayerTables.forEach((array) => {
+    array.forEach((number) => {
+      if (parseInt(number.innerText) === randomNumber) {
+        number.classList.add("selectedCell")
+      }
+    })
+  })
+  arrayOfExtractedNumbers.push(randomNumber)
+  arrayOfCellNumbers[randomNumber - 1].classList.add("selectedCell")
+}
+
+generateRandomNumber = () => {
+  let randomNumber = 0
+  return (randomNumber = Math.ceil(Math.random() * 76))
 }
 
 const createTombolaTable = () => {
