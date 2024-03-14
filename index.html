@@ -9,13 +9,22 @@
   </head>
   <body>
     <header>
-      <h1>Tabellone Tombola!</h1>
-      <button type="button" id="numberExtractionBtn">Estrai un numero!</button>
+      <h1 hidden id="h1">Tabellone Tombola!</h1>
+      <button hidden type="button" id="numberExtractionBtn">
+        Estrai un numero!
+      </button>
+      <h3 id="h3">
+        Scrivi qui affinco il numero di tabelle con le quali vuoi giocare:
+      </h3>
+      <div id="start">
+        <input type="number" value="1" min="1" max="5" id="startBox" />
+        <button type="button" id="startButton">Premi qui per iniziare</button>
+      </div>
     </header>
     <main>
       <div id="tombolaContainer"></div>
 
-      <h2>Tabelle del Giocatore</h2>
+      <h2 hidden id="pTables">Tabelle del Giocatore</h2>
       <div id="playerTables"></div>
     </main>
     <script src="scripts/index.js"></script>

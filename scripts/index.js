@@ -1,7 +1,28 @@
+const startBtn = document.getElementById("startButton")
 const numberExtBtn = document.getElementById("numberExtractionBtn")
 let arrayOfCellNumbers = []
 let arrayOfExtractedNumbers = []
 let arrayOfPlayerTables = []
+
+handleStart = () => {
+  const numberBox = document.getElementById("startBox")
+  const h1 = document.getElementById("h1")
+  const h3 = document.getElementById("h3")
+  const pTables = document.getElementById("pTables")
+
+  const number = parseInt(numberBox.value)
+
+  numberBox.hidden = true
+  startBtn.hidden = true
+  h3.hidden = true
+
+  h1.hidden = false
+  numberExtBtn.hidden = false
+  pTables.hidden = true
+
+  createTombolaTable()
+  createPlayerTable(number)
+}
 
 handleNumberExtraction = () => {
   let randomNumber = Math.ceil(Math.random() * 76)
@@ -69,7 +90,5 @@ const createPlayerTable = (number) => {
 
 window.onload = () => {
   numberExtBtn.addEventListener("click", handleNumberExtraction)
-
-  createPlayerTable(3)
-  createTombolaTable()
+  startBtn.addEventListener("click", handleStart)
 }
